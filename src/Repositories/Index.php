@@ -9,7 +9,7 @@
 namespace Elastic\Repositories;
 
 use Elastic\Entities\AbstractCoreEntity;
-use Elasticsearch\Client;
+use Elastic\Client;
 use Elastic\Entities\Index as IndexEntity;
 
 class Index extends AbstractCoreEntity
@@ -19,13 +19,13 @@ class Index extends AbstractCoreEntity
      */
     protected $client;
 
-    public function __construct(Client $client)
+    public function __construct()
     {
-        $this->client = $client;
+        $this->client = Client::getInstance()->create();
     }
 
     /**
-     * @param string $index
+     * @param $index
      * @param array $mappings
      * @param array $settings
      * @param array $aliases

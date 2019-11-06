@@ -12,7 +12,7 @@ namespace Elastic\Entities;
 use Elastic\Collections\AliasCollection;
 use Elastic\Collections\MappingCollection;
 use Elastic\Collections\SettingsCollection;
-use Elasticsearch\Client;
+use Elastic\Client;
 
 class Index extends AbstractCoreEntity
 {
@@ -22,14 +22,13 @@ class Index extends AbstractCoreEntity
      */
     private $client;
 
-    public function __construct(Client $client)
+    public function __construct()
     {
-        $this->client = $client;
+        $this->client = Client::getInstance()->create();
     }
 
     public function sync(array $data){
         if(!empty($data)){
-//            dd($data);
             if(array_key_exists('mappings', $data[$this->getIndexName()])){
                 $this->mappings = MappingCollection::buildFromArray($data[$this->getIndexName()]['mappings']);
             }
