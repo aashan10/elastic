@@ -14,8 +14,9 @@ Elastic is a high level PHP client for [Elasticsearch](https://elastic.co), a se
 
 The project is highly dependent on [elastic/elasticsearch-php](https://github.com/elastic/elasticsearch-php). Therefore, you need to see the system requirements of the project accordingly. Currently, this project only supports elasticsearch v6.x.
 The system requirements are:
-|Software|Version|
-|--|--|
+
+| Software | Version |
+|----------|---------|
 |Elasticsearch|6.x and above|
 |PHP|7.1.x and above|
 
