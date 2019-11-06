@@ -25,7 +25,7 @@ The system requirements are:
 
 Elastic can be installed via composer. To install Elastic via composer, use the following command.
 ```
-composer require "aashan10/elastic-search : ~0.0.1 "
+composer require "aashan10/elastic-search:~0.0.1"
 ```
 
 ## Usage
