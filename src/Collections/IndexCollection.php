@@ -2,8 +2,8 @@
 /**
  * IndexCollection
  *
- * @copyright Copyright © 2019 Javra Softwares. All rights reserved.
- * @author Ashan Ghimire  <ashan.ghimire@javra.com>
+ * @copyright Copyright © 2019. All rights reserved.
+ * @author Ashan Ghimire  <ashanghimire10@gmail.com>
  */
 
 
@@ -14,7 +14,7 @@ class IndexCollection extends AbstractCollection
 
     public static function buildFromArray(array $array)
     {
-        
+
     }
 
 }
