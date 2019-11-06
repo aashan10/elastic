@@ -9,7 +9,7 @@
 
 namespace Elastic\Collections;
 
-use Elastic\Core\Entities\Setting;
+use Elastic\Entities\Setting;
 
 class SettingsCollection extends AbstractCollection
 {

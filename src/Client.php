@@ -1,10 +1,10 @@
 <?php
 
-namespace Elastic\Core;
+namespace Elastic;
 
 use Elasticsearch\Client as ElasticClient;
 use Elasticsearch\ClientBuilder;
-use Elastic\Core\Repositories\Index;
+use Elastic\Repositories\Index;
 
 class Client{
 

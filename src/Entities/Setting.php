@@ -1,21 +1,21 @@
 <?php
 /**
- * Mapping
+ * Setting
  *
  * @copyright Copyright © 2019. All rights reserved.
 * @author Ashan Ghimire  <ashanghimire10@gmail.com>
  */
 
 
-namespace Elastic\Core\Entities;
+namespace Elastic\Entities;
 
-class Mapping extends AbstractCoreEntity
+class Setting extends AbstractCoreEntity
 {
 
     public static function buildFromArray(iterable $array){
-        $mapping = new Mapping();
-        $mapping->data = $array;
-        return $mapping;
+        $setting = new Setting();
+        $setting->data = $array;
+        return $setting;
     }
 
 }

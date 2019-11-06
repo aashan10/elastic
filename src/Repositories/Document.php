@@ -7,7 +7,7 @@
  */
 
 
-namespace Elastic\Core\Repositories;
+namespace Elastic\Repositories;
 
 use Elasticsearch\Client;
 use Elastic\Collections\DocumentCollection;

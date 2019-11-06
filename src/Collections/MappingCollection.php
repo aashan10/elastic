@@ -9,7 +9,7 @@
 
 namespace Elastic\Collections;
 
-use Elastic\Core\Entities\Mapping;
+use Elastic\Entities\Mapping;
 
 class MappingCollection extends AbstractCollection
 {

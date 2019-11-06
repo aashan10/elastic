@@ -9,7 +9,7 @@
 
 namespace Elastic\Collections;
 
-use Elastic\Core\Entities\Alias;
+use Elastic\Entities\Alias;
 
 class AliasCollection extends AbstractCollection
 {

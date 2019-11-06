@@ -7,7 +7,7 @@
  */
 
 
-namespace Elastic\Core\Entities;
+namespace Elastic\Entities;
 
 use Elastic\Collections\AliasCollection;
 use Elastic\Collections\MappingCollection;

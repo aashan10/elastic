@@ -6,11 +6,11 @@
  * @author Ashan Ghimire  <ashanghimire10@gmail.com>
  */
 
-namespace Elastic\Core\Repositories;
+namespace Elastic\Repositories;
 
-use Elastic\Core\Entities\AbstractCoreEntity;
+use Elastic\Entities\AbstractCoreEntity;
 use Elasticsearch\Client;
-use Elastic\Core\Entities\Index as IndexEntity;
+use Elastic\Entities\Index as IndexEntity;
 
 class Index extends AbstractCoreEntity
 {

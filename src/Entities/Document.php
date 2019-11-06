@@ -7,7 +7,7 @@
  */
 
 
-namespace Elastic\Core\Entities;
+namespace Elastic\Entities;
 
 class Document extends AbstractCoreEntity
 {

@@ -7,7 +7,7 @@
  */
 
 
-namespace Elastic\Core\Entities;
+namespace Elastic\Entities;
 
 /**
  * @method setName(int|string $key)

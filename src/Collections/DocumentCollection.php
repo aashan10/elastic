@@ -9,7 +9,7 @@
 
 namespace Elastic\Collections;
 
-use Elastic\Core\Entities\Document;
+use Elastic\Entities\Document;
 
 class DocumentCollection extends AbstractCollection
 {
