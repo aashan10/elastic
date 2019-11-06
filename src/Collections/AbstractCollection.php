@@ -8,34 +8,53 @@
 
 
 namespace Elastic\Collections;
+
 use Elastic\Contracts\CollectionInterface;
 use Iterator;
+
 abstract class AbstractCollection implements Iterator, CollectionInterface
 {
     protected $collection = [];
     private $key = 0;
-    public function get(): iterable
+
+    /**
+     * @return array
+     */
+    public function get(): array
     {
-        $this->collection;
+        return $this->collection;
     }
+
+    /**
+     * @return mixed
+     */
     public function current()
     {
         return $this->collection[$this->key];
     }
 
+    /**
+     * increment the index
+     */
     public function next()
     {
         ++$this->key;
     }
 
+    /**
+     * Rewind the key back to 0
+     */
     public function rewind()
     {
         $this->key = 0;
     }
 
+    /**
+     * @return bool
+     */
     public function valid()
     {
-        if(array_key_exists($this->key, $this->collection)){
+        if (array_key_exists($this->key, $this->collection)) {
             return true;
         }
         return false;
@@ -52,7 +71,11 @@ abstract class AbstractCollection implements Iterator, CollectionInterface
         return $this->key;
     }
 
-    protected function add($item){
+    /**
+     * @param $item
+     */
+    protected function add($item)
+    {
         array_push($this->collection, $item);
     }
 }
