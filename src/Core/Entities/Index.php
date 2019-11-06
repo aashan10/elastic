@@ -60,4 +60,10 @@ class Index extends AbstractCoreEntity
         }
         return false;
     }
+
+    public function delete(){
+        $this->client->indices()->delete([
+           'index' => $this->getIndexName()
+        ]);
+    }
 }
