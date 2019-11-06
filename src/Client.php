@@ -2,27 +2,30 @@
 
 namespace Elastic;
 
-use Elasticsearch\Client as ElasticClient;
 use Elasticsearch\ClientBuilder;
-use Elastic\Repositories\Index;
 
 class Client{
+    protected static $instance = null;
+    private $client;
+    private $hosts = [];
 
-    /**
-     * ElasticSearch Client
-     *
-     * @var ElasticClient;
-     */
-    protected $elasticClient;
-
-    protected $indices = [];
-    protected $params = [];
-
-    public function __construct($hosts = [])
+    private function __construct(array $hosts)
     {
-        $this->elasticClient = ClientBuilder::create()->setHosts($hosts)->build();
+        $this->hosts =  $hosts;
+        if(empty($this->hosts)){
+            $this->hosts[] = 'localhost:9200';
+        }
+        $this->client = ClientBuilder::create()->setHosts($this->hosts)->build();
     }
-    public function index(){
-        return new Index($this->elasticClient);
+
+    public static function getInstance($hosts = []){
+        if(self::$instance == null){
+            self::$instance = new Client($hosts);
+        }
+        return self::$instance;
+    }
+
+    public function create(){
+        return $this->client;
     }
 }
